@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="box">
+    <div class="main">
+      <div class="panel" id="food1">西瓜</div>
+      <div class="panel" id="food2">葡萄</div>
+      <div class="panel" id="food3">梨子</div>
+      <div class="panel" id="food4">苹果</div>
+      <div class="panel" id="food5">香蕉</div>
+    </div>
+    <zj-anchor :list="list" :current="1"></zj-anchor>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      list: [
+        { title: '西瓜', href: '#food1' },
+        { title: '葡萄', href: '#food2' },
+        { title: '梨子', href: '#food3' },
+        { title: '苹果', href: '#food4' },
+        { title: '香蕉', href: '#food5' },
+      ]
+    }
+  },
+  created() {
+  },
+  methods: {
+    
   }
 }
 </script>
-
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style>
+.box{
+  display: flex;
+  height: 100vh;
+}
+.main {
+  flex: 1;
+}
+[id^='food'] {
+  height: 400px;
+  font-size: 20px;
 }
 </style>
+
