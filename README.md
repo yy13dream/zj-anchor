@@ -5,9 +5,6 @@
 ## Project setup
 
 ```
-npm install -g nrm
-nrm add sinoiov http://npm.sinoiov.com:4873/
-nrm use sinoiov
 npm install zj-anchor
 ```
 
